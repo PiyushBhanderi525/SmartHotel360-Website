@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: piyushbhanderismarthotelwebsite 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: piyushbhanderismarthotelwebsite
+  template:
+    metadata:
+      labels:
+        app: piyushbhanderismarthotelwebsite 
+    spec:
+      containers:
+        - name: piyushbhanderismarthotelwebsite 
+          image: piyushbhandericr.azurecr.io/piyushbhanderismarthotelwebsite
+          ports:
+          - containerPort: 80
